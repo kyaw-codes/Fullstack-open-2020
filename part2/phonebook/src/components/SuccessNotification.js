@@ -1,6 +1,6 @@
 import React from 'react'
 
-const SuccessNotification = ({message, type}) => {
+const SuccessNotification = ({message}) => {
     const successStyle = {
         color: 'green',
         background: 'lightgrey',

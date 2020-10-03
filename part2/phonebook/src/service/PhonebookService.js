@@ -1,6 +1,8 @@
 import Axios from 'axios'
 
-const baseUrl = "http://localhost:3001/persons"
+const baseUrl = "/api/persons";
+
+const getAll = () => Axios.get(baseUrl).then(response => response.data)
 
 const create = (data) => {
     return Axios.post(baseUrl, data).then(response => response.data)
@@ -16,8 +18,8 @@ const findPersonByName = (name) => {
         .then(persons => persons.find(p => p.name === name))
 }
 
-const update = (id, person) => {
-    return Axios.patch(`${baseUrl}/${id}`, person)
+const update = (person) => {
+    return Axios.put(`${baseUrl}/`, person).then(res => res.data)
 }
 
-export { create, remove, update, findPersonByName }
+export { getAll, create, remove, update, findPersonByName }
