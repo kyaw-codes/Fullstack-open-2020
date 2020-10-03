@@ -1,0 +1,14 @@
+{
+  "name": "command-line-database",
+  "version": "1.0.0",
+  "description": "Cloud-based MongoDB database for the phonebook application with MongoDB Atlas.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ko Kyaw",
+  "license": "MIT",
+  "dependencies": {
+    "mongoose": "^5.10.7"
+  }
+}
